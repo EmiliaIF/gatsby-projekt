@@ -1,0 +1,43 @@
+$background-color: #ffbbf0;
+
+main {
+    text-align: center;
+    padding: 1rem;
+    background-color: $background-color ;
+    margin-bottom: 200px;
+  
+    h1 {
+      font-size: 2.5rem;
+      margin: 1rem 0;
+      color: #0085a1;
+    }
+  
+    article {
+      margin: 1rem 0;
+      padding: 1rem;
+      background-color: #ffe1fc;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  
+      h2 {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 0.5rem;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+      }
+  
+      img {
+        width: 30%;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+  
+      p {
+        font-size: 1.2rem;
+        color: #555;
+        margin-top: 1rem;
+        text-align: justify;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+      }
+    }
+  }

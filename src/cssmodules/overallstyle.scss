@@ -1,0 +1,36 @@
+$background-color: #ffbbf0;
+$text-color: rgb(0, 0, 0);
+
+.home-page {
+  margin-top: 50px;
+  margin-bottom: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: $background-color;
+ 
+
+  h2 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: $text-color;
+    width: 100%;
+  }
+  
+  img {
+    width: 50%;
+    height: auto;
+    align-self: center;
+    margin-left: 420px;
+    border-radius: 10px;
+  }
+  p{
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 1rem;
+  margin-left: 38%;
+  text-align: justify;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+}
