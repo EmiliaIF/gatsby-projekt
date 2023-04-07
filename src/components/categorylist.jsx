@@ -7,12 +7,10 @@ import "../cssmodules/blogpost.scss"
 const CategoryMenu = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulBlogPost {
-        edges {
-          node {
-            title
-            slug
-          }
+      allContentfulCategory {
+        nodes {
+          title
+          slug
         }
       }
     }
@@ -22,9 +20,9 @@ const CategoryMenu = () => {
     <div className="category-menu">
       <h3>Categories:</h3>
       <ul>
-        {data.allContentfulBlogPost.edges.map((edge, index) => (
+        {data.allContentfulCategory.nodes.map((node, index) => (
           <li key={index}>
-            <Link to={`/projectpage/${edge.node.slug}`}>{edge.node.title}</Link>
+            <Link to={`/projectpage/${node.slug}`}>{node.title}</Link>
           </li>
         ))}
       </ul>

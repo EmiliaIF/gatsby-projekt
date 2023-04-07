@@ -1,8 +1,9 @@
 import * as React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Navbar from "../components/navbar"
 import "../components/navbar"
 import CategoryMenu from "../components/categorylist"
+import Post from '../components/Post'
 
 const BlogPost = ({ data }) => {
   return (
@@ -12,17 +13,10 @@ const BlogPost = ({ data }) => {
       
       <div>
 
-      {data.allContentfulBlogPost.edges.map(({ node }) => (
-        <article>
-          <h2>{node.title}</h2>
-          {node.images.map(image => (
-            <img src={image.url} width="50" height="300"></img>
-          ))}
-          
-          <p>{node.myContent.myContent}</p>
-          <Link to={node.link}>Link</Link>
-        </article>
-      ))}
+      {data.allContentfulBlogPost.nodes.map((post, index) =>  {
+        return (
+        <Post post={post} key={index} />
+      )})}
     </div>
 
     </main>
@@ -37,19 +31,19 @@ export const Head = () => <title>Project Page</title>
 
 //GRAPHQL
 export const BlogPostPageQuery = graphql` 
-query MyBlogPostQuery {
+query getAllPosts {
   allContentfulBlogPost {
-    edges {
-      node {
-        title
-        myContent {
-          myContent
-        }
-        link
-        images {
-          url
-        }
+    nodes {
+      title
+      myContent {
+        myContent
       }
+      link
+      images {
+        url
+      }
+      slug
+      category
     }
   }
 }`;

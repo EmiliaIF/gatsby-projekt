@@ -53,3 +53,15 @@ nav {
       }
     }
   }
+
+@media screen and (max-width: 760px) {
+  nav {
+    flex-direction: column;
+
+    ul {
+      flex-direction: column;
+    }
+  }
+}
+  
+
